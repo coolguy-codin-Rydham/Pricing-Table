@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+      }
+
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        gap: 50px;
+      }
+      .pricing-plan {
+        background-color: rgb(232, 229, 229);
+        padding: 15px;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      .plan-title {
+        font-weight: bold;
+      }
+
+      .plan-price {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .plan-features {
+        list-style-type: none;
+      }
+
+      .plan-features li {
+        padding: 10px;
+      }
+
+      .plan-button {
+        background-color: orange;
+        border: 0px;
+        padding: 10px;
+        border-radius: 4px;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 900px) {
+        .pricing-container {
+          flex-direction: column;
+          height: 100%;
+        }
+      }
+      /*Below this line everything is self-made*/
+      .pricing-plan:hover {
+        /* transition: smooth 10s; */
+        box-shadow: 5px 5px grey;
+        scale: 120%;
+        transition: all 30ms;
+        background: linear-gradient(
+          0deg,
+          beige 20%,
+          white 50%,
+          rgb(236, 236, 184) 98%
+        );
+      }
+      .idkwhy {
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .idkwhy:hover {
+        background-color: beige;
+      }
+      .plan-button:hover {
+        transition: all 10ms;
+        scale: 111%;
+        border-radius: 4px;
+      }
+      .plan-button:active {
+        background-color: rgb(187, 121, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="idkwhy">
+          <div class="plan-title">Basic</div>
+          <div class="plan-price">&#8377;1199/month</div>
+          <ul class="plan-features">
+            <li>✅ 10GB Storage</li>
+            <li>✅ 1 User</li>
+            <li>🚫 Support</li>
+          </ul>
+          <button class="plan-button">Sign Up</button>
+        </div>
+      </div>
+      <div class="pricing-plan">
+        <div class="idkwhy">
+          <div class="plan-title">Standard</div>
+          <div class="plan-price">&#8377;1999/month</div>
+          <ul class="plan-features">
+            <li>✅ 50GB Storage</li>
+            <li>✅ 5 Users</li>
+            <li>✅ Phone &amp; Email Support</li>
+          </ul>
+          <button class="plan-button">Sign Up</button>
+        </div>
+      </div>
+      <div class="pricing-plan">
+        <div class="idkwhy">
+          <div class="plan-title">Premium</div>
+          <div class="plan-price">&#8377;4999/month</div>
+          <ul class="plan-features">
+            <li>✅ 100GB Storage</li>
+            <li>✅ 10 Users</li>
+            <li>✅ 24/7 Support</li>
+          </ul>
+          <button class="plan-button">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
